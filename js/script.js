@@ -35,7 +35,20 @@ const app = new Vue(
             ]
         },
         methods: {
-
+            showNextSlide: function () {
+                if (this.currentActiveSlide < this.slides.length - 1){
+                    this.currentActiveSlide++;
+                } else {
+                    this.currentActiveSlide = 0;
+                }
+            },
+            showPrevSlide: function () {
+                if (this.currentActiveSlide > 0) {
+                    this.currentActiveSlide--;
+                } else {
+                    this.currentActiveSlide = this.slides.length - 1
+                }
+            }
         }
     }
 )
