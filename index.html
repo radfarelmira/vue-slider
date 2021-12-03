@@ -48,7 +48,7 @@
             
     
                     <!-- Single thumb -->
-                    <div class="single-thumb" v-for='(element, index) in slides' :class="{ 'active': index === currentActiveSlide }">
+                    <div @click="changeSlide(index)" class="single-thumb" v-for='(element, index) in slides' :class="{ 'active': index === currentActiveSlide }">
                         <img :src="element.image" :alt="element.title">
                     </div>
     
