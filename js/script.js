@@ -11,6 +11,7 @@ const app = new Vue(
         el: '#root',
         data: {
             currentActiveSlide: 0,
+            clock: null,
 
             slides:  [
                 {
@@ -57,7 +58,35 @@ const app = new Vue(
             },
             changeSlide: function (index){
                 this.currentActiveSlide = index;
+            },
+            increment: function() {
+                if (this.currentActiveSlide < this.slides.length - 1){
+                    this.currentActiveSlide++;
+                } else {
+                    this.currentActiveSlide = 0;
+                }
+            },
+            startAutoplay: function () {
+                this.clock = setInterval(() =>{
+                    if (this.currentActiveSlide < this.slides.length - 1){
+                        this.currentActiveSlide++;
+                    } else {
+                        this.currentActiveSlide = 0;
+                    }
+                }, 2000)
+            },
+            stopAutoplay: function () {
+                clearInterval(this.clock)
             }
+        },
+        created: function () {
+            this.clock = setInterval(() =>{
+                if (this.currentActiveSlide < this.slides.length - 1){
+                    this.currentActiveSlide++;
+                } else {
+                    this.currentActiveSlide = 0;
+                }
+            }, 2000)
         }
     }
-)
+);

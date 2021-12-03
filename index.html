@@ -16,7 +16,7 @@
     <div id="root">
         <div class="app-container">
             <!-- Slider -->
-            <div class="slider">
+            <div v-on:mouseover="stopAutoplay" v-on:mouseleave="startAutoplay" class="slider">
                 <!-- Images container -->
                 <div class="big-images-container">
                     <!-- Single image -->
