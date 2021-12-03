@@ -21,11 +21,11 @@
                 <div class="big-images-container">
                     <!-- Single image -->
                     <div class="single-image">
-                        <img src="img/01.jpg" alt="Img 1">
+                        <img :src="slides[currentActiveSlide].image" :alt="slides[currentActiveSlide].title">
     
                         <div class="single-image-text">
-                            <h2>Title</h2>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore consectetur quos labore dicta excepturi corrupti velit eveniet iure? Consequatur sed eius sunt officiis! Quod blanditiis sit laboriosam itaque fugit doloremque.</p>
+                            <h2>{{ slides[currentActiveSlide].title }}</h2>
+                            <p>{{ slides[currentActiveSlide].text }}</p>
                         </div>
                     </div>
                  
@@ -48,7 +48,7 @@
             
     
                     <!-- Single thumb -->
-                    <div class="single-thumb active">
+                    <div class="single-thumb">
                         <img src="img/01.jpg" alt="Img 1">
                     </div>
     

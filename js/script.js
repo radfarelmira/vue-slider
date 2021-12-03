@@ -4,6 +4,8 @@ const app = new Vue(
     {
         el: '#root',
         data: {
+            currentActiveSlide: 0,
+
             slides:  [
                 {
                     image: 'img/01.jpg',
