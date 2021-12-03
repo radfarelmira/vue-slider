@@ -1,0 +1,102 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* COMMON */
+.app-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SLIDER */
+.slider {
+    width: 70%;
+    height: 70%;
+    position: relative;
+    display: flex;
+}
+
+/* Big Images container */
+.big-images-container {
+    width: 80%;
+    height: 100%;
+    position: relative;
+}
+
+.single-image {
+    width: 100%;
+    height: 100%;
+}
+
+
+.single-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.single-image-text{
+    width: 90%;
+    color: whitesmoke;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    padding: 20px;
+}
+
+/* Thumbs */
+.thumbs{
+    width: 20%;
+    height: 100%;
+    position: relative;
+}
+
+.single-thumb{
+    width: 100%;
+    height: 20%;
+    filter: brightness(0.6);
+}
+
+.single-thumb img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.single-thumb.active {
+    border: 2px solid whitesmoke;
+    filter: brightness();
+}
+
+/* Arrows */
+.arrow {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 20px;
+    background-color: rgba(250, 250, 250, 0.5);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.arrow.prev {
+    top: 10px;
+}
+
+.arrow.next {
+    bottom: 10px;
+}
