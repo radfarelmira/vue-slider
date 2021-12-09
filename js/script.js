@@ -74,7 +74,7 @@ const app = new Vue(
             }
         },
         created: function () {
-            this.clock = setInterval(this.showNextSlide, 1000)
+            this.startAutoplay();
         }
     }
 );
