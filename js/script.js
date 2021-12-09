@@ -59,13 +59,6 @@ const app = new Vue(
             changeSlide: function (index){
                 this.currentActiveSlide = index;
             },
-            increment: function() {
-                if (this.currentActiveSlide < this.slides.length - 1){
-                    this.currentActiveSlide++;
-                } else {
-                    this.currentActiveSlide = 0;
-                }
-            },
             startAutoplay: function () {
                 this.clock = setInterval(this.showNextSlide, 1000)
             },
