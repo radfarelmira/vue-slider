@@ -67,26 +67,14 @@ const app = new Vue(
                 }
             },
             startAutoplay: function () {
-                this.clock = setInterval(() =>{
-                    if (this.currentActiveSlide < this.slides.length - 1){
-                        this.currentActiveSlide++;
-                    } else {
-                        this.currentActiveSlide = 0;
-                    }
-                }, 2000)
+                this.clock = setInterval(this.showNextSlide, 1000)
             },
             stopAutoplay: function () {
                 clearInterval(this.clock)
             }
         },
         created: function () {
-            this.clock = setInterval(() =>{
-                if (this.currentActiveSlide < this.slides.length - 1){
-                    this.currentActiveSlide++;
-                } else {
-                    this.currentActiveSlide = 0;
-                }
-            }, 2000)
+            this.clock = setInterval(this.showNextSlide, 1000)
         }
     }
 );
